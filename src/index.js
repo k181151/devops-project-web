@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import { grey } from '@mui/material/colors';
 
 
 const mainTheme = createTheme({
@@ -15,11 +16,21 @@ const mainTheme = createTheme({
       'Arial',
       'sans-serif',
     ].join(','),
+    h1: {
+      fontFamily: 'EB Garamond, Helvetica',
+    },
+    h2: {
+      fontFamily: 'EB Garamond, Helvetica',
+    },
+    h3: {
+      fontFamily: 'EB Garamond, Helvetica',
+    },
   },
   palette: {
     mode: 'dark',
     primary: {
       main: '#8C52FF',
+      background: '#000000',
     },
     secondary: {
       main: '#FF7E4B',

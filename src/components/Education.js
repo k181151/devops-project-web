@@ -1,6 +1,7 @@
 // src/pages/Education.js
 import React from 'react';
 import { Container, List, ListItem, ListItemText, Typography } from '@mui/material';
+import ResponsiveAppBar from './AppBar';
 
 const educationList = [
   { level: '9th Grade', courses: ['Math', 'Chemistry', 'Biology', 'English'] },
@@ -12,21 +13,29 @@ const educationList = [
 
 const Education = () => {
   return (
-    <Container>
-      <Typography variant="h3" component="h1" gutterBottom>
-        My Education
-      </Typography>
-      <List>
-        {educationList.map((edu, index) => (
-          <ListItem key={index}>
-            <ListItemText
-              primary={edu.level}
-              secondary={edu.courses.join(', ')}
-            />
-          </ListItem>
-        ))}
-      </List>
-    </Container>
+    <div>
+      
+      <ResponsiveAppBar/>
+      <Container>
+        <Typography mt={20} variant="h3" align="center" component="h1" gutterBottom>
+          Education
+        </Typography>
+        <Typography variant="body1" align="center" component="p" gutterBottom>
+          Among various other courses, here are some notable mentions
+        </Typography>
+        <List>
+          {educationList.map((edu, index) => (
+            <ListItem key={index}>
+              <ListItemText
+                primary={edu.level}
+                secondary={edu.courses.join(', ')}
+              />
+            </ListItem>
+          ))}
+        </List>
+      </Container>
+
+    </div>
   );
 };
 
